@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuấn Khanh - Web Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <h1 class="loader-title">LOADING</h1>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="progress-text">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sakura-container"></div>
+
+    <div class="audio-player">
+        <button class="music-toggle">
+            <i class="fas fa-music"></i>
+            <div class="music-bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </button>
+
+        <div class="playlist-panel">
+            <div class="playlist-header">
+                <h3>Playlist</h3>
+                <button class="close-playlist"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="playlist-items">
+                <div class="playlist-item" data-src="https://files.catbox.moe/0x6q8k.mp3">
+                    <div class="song-info">
+                        <div class="song-name">BSNL 4</div>
+                        <div class="artist">Bray, YoungH</div>
+                    </div>
+                    <div class="controls">
+                        <i class="fas fa-play play-btn"></i>
+                        <i class="fas fa-pause pause-btn hidden"></i>
+                    </div>
+                </div>
+
+                <div class="playlist-item" data-src="https://files.catbox.moe/4p2w0b.mp3">
+                    <div class="song-info">
+                        <div class="song-name">Chơi Cho Đẹp</div>
+                        <div class="artist">SMO, Baby Red</div>
+                    </div>
+                    <div class="controls">
+                        <i class="fas fa-play play-btn"></i>
+                        <i class="fas fa-pause pause-btn hidden"></i>
+                    </div>
+                </div>
+
+                <div class="playlist-item" data-src="https://files.catbox.moe/ji6h2o.mp3">
+                    <div class="song-info">
+                        <div class="song-name">Nhật Kí Vào Đời</div>
+                        <div class="artist">KARIK, Thai VG</div>
+                    </div>
+                    <div class="controls">
+                        <i class="fas fa-play play-btn"></i>
+                        <i class="fas fa-pause pause-btn hidden"></i>
+                    </div>
+                </div>
+
+                <div class="playlist-item" data-src="https://files.catbox.moe/6a0f7y.mp3">
+                    <div class="song-info">
+                        <div class="song-name">Trình</div>
+                        <div class="artist">Hiếu Thứ Hai</div>
+                    </div>
+                    <div class="controls">
+                        <i class="fas fa-play play-btn"></i>
+                        <i class="fas fa-pause pause-btn hidden"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <div class="banner">
+                <img class="banner-gif" src="https://files.catbox.moe/mbzjyq.gif" alt="Banner GIF">
+                <canvas id="audioVisualizer"></canvas>
+            </div>
+            <div class="profile-img">
+                <img src="https://via.placeholder.com/120" alt="Profile">
+            </div>
+            <div class="card-body">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Online
+                    <span class="ping-indicator">
+                        <i class="fas fa-signal"></i>
+                        <span class="ping-value">--ms</span>
+                    </span>
+                </div>
+                <div class="name">
+                   (: TKhanh <x> Miku :3
+                    <span class="verified-badge">
+                        <i class="fas fa-check"></i>
+                    </span>
+                    <div class="music-bars">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <div class="role" data-text="Web Developer">Web Developer</div>
+                <div class="bio">
+                    <p>Tuấn Khanh - TKhanh Dev</p>
+                </div>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Tuyên Quang, Việt Nam
+                </div>
+                <div class="tech-stack">
+                    <i class="fab fa-html5" data-tooltip="HTML5"></i>
+                    <i class="fab fa-css3-alt" data-tooltip="CSS3"></i>
+                    <i class="fab fa-js" data-tooltip="JavaScript"></i>
+                    <i class="fab fa-react" data-tooltip="React"></i>
+                    <i class="fab fa-php" data-tooltip="PHP"></i>
+                </div>
+                <div class="social">
+                    <a href="https://www.facebook.com/KhanhShado.Vip" class="social-link" data-tooltip="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@tkhanhlovemiku" class="social-link" data-tooltip="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://github.com/tkhanh.dev" class="social-link" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <a href="mailto:khanhshado9@gmail.com" class="connect-btn">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop></audio>
+    <script src="script.js"></script>
+</body>
+</html>
